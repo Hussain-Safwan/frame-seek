@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Video"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Uplaod a suitable video where you want to seek."
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="2dp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="576dp">
+
+        <LinearLayout
+            android:id="@+id/upload_video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:background="@drawable/dashed_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/upload_icon_background"
+                android:contentDescription="@string/upload_icon_desc"
+                android:padding="10dp"
+                android:src="@drawable/ic_video_file"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:text="Tap to upload video"
+                android:textAlignment="center"
+                android:textColor="@color/tilt"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="(Large size video takes time to process)"
+                android:textAlignment="center"
+                android:textColor="#5E6464"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/uploading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:background="@drawable/dashed_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/upload_icon_desc"
+                android:onClick="onNextClick"
+                android:padding="10dp"
+                android:src="@drawable/ic_video"
+                android:textAlignment="center" />
+
+            <ProgressBar
+                android:id="@+id/video_upload_progressbar"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="341dp"
+                android:layout_height="32dp"
+                android:indeterminate="false"
+                android:indeterminateTint="@color/tilt"
+                android:progress="0"
+                android:progressBackgroundTint="@color/tilt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Uploading video..."
+                android:textAlignment="center"
+                android:textColor="@color/tilt"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/uploading_video_filename"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="videofile.mp4"
+                android:textAlignment="center"
+                android:textColor="#5E6464"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upload_complete_layout"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:background="@drawable/dashed_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_success"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Upload Completed"
+                android:textAlignment="center"
+                android:textColor="@color/tilt"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/uploaded_video_filename"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="videofile.mp4"
+                android:textAlignment="center"
+                android:textColor="#5E6464"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/clear_upload"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:onClick="resetState"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/outline_delete_24"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/clearUploadText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear Upload"
+                    android:textColor="@color/tilt"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Full Screen Loading Overlay -->
+        <LinearLayout
+            android:id="@+id/loading_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AA000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/loading_text"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/button_bg"
+        android:enabled="false"
+        android:onClick="onNextClick"
+        android:text="@string/next_button_label"
+        android:textColor="@color/button_text" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.modelload'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.modelload"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    
+    // PyTorch dependencies
+    implementation 'org.pytorch:pytorch_android:2.1.0'
+    implementation 'org.pytorch:pytorch_android_torchvision:2.1.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation libs.firebase.crashlytics.buildtools
+
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation libs.litert.api
+    implementation libs.litert
+    implementation libs.litert.gpu
+    implementation libs.litert.support.api
+    implementation libs.exifinterface
+    implementation 'com.google.mediapipe:tasks-vision:0.10.14'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+} 

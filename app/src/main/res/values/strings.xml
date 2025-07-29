@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ModelLoad</string>
+    <string name="next_button_label">Next</string>
+    <string name="loading_text">Extracting frames..</string>
+    <string name="upload_icon_desc">upload_icon</string>
+    <string name="search_box_placeholder">Ask something...</string>
+</resources>
