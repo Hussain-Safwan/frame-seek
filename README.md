@@ -12,7 +12,7 @@ We have used the following models,
 ## Run Locally
 To run the project locally, 
 - Clone the repository.
-- Download the assets folder, containing the compressed model weights and tokenizer dictionaries, from [this link]([url](https://drive.google.com/drive/folders/1vu7BpwznG4XxKswEeXfTeXlIthmHJUv8?usp=sharing)).
+- Download the assets folder, containing the compressed model weights and tokenizer dictionaries, from [this link](https://drive.google.com/drive/folders/1vu7BpwznG4XxKswEeXfTeXlIthmHJUv8?usp=sharing).
 - Place the assets folder in this path:
 - Execute the project.
 
@@ -27,5 +27,5 @@ Follow the steps below to use this app.
 - Press the result to seek the desired moment.
 
 ## Release
-The latest APK package may be downloaded [from here]([url](https://drive.google.com/file/d/1eigecKbv7IhpLEv3LyLN_PwRWI5juOgu/view?usp=sharing)). 
+The latest APK package may be downloaded [from here](https://drive.google.com/file/d/1eigecKbv7IhpLEv3LyLN_PwRWI5juOgu/view?usp=sharing). 
 
