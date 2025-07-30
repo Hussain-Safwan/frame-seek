@@ -29,5 +29,5 @@ Follow the steps below to use this app.
 - Press the result to seek the desired moment.
 
 ## Release
-The latest APK package may be downloaded [from here](https://drive.google.com/file/d/1eigecKbv7IhpLEv3LyLN_PwRWI5juOgu/view?usp=sharing). 
+The latest APK package may be downloaded [from here](https://drive.google.com/file/d/1IOJPRmTmp2BOSHh25Xn34T5HxyBOLLTf/view?usp=drive_link). 
 
