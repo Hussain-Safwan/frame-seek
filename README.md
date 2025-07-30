@@ -3,6 +3,8 @@
 This project explores a lightweight, on-device solution for intelligent video frame retrieval based on natural user queries. Given a video of arbitrary length, the system identifies and returns the most relevant frame that matches a user’s input — which can be a text description, an image of a person, or a combination of both.
 
 ## Architecture
+![image](https://drive.google.com/uc?export=view&id=1sAgzCMlI-q98H0jofhgdk_XtNcCa18OZ)
+
 We have used the following models, 
 - **CLIP**: A fine-tuned version of OpenAI's CLIP has been used for video scene understanding.
 - **FaceNet**: FaceNet is a face recognition model built on top of YOLOv8. We have used a fine-tuned FaceNet for face recognition.
