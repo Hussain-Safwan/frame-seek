@@ -2,6 +2,9 @@
 
 This project explores a lightweight, on-device solution for intelligent video frame retrieval based on natural user queries. Given a video of arbitrary length, the system identifies and returns the most relevant frame that matches a user’s input — which can be a text description, an image of a person, or a combination of both.
 
+## Release
+#### The latest APK package may be downloaded [from here](https://drive.google.com/file/d/1IOJPRmTmp2BOSHh25Xn34T5HxyBOLLTf/view?usp=drive_link). 
+
 ## Architecture
 ![image](https://drive.google.com/uc?export=view&id=1sAgzCMlI-q98H0jofhgdk_XtNcCa18OZ)
 
@@ -28,6 +31,4 @@ Follow the steps below to use this app.
 - Results appear as timestamps below the query box.
 - Press the result to seek the desired moment.
 
-## Release
-The latest APK package may be downloaded [from here](https://drive.google.com/file/d/1IOJPRmTmp2BOSHh25Xn34T5HxyBOLLTf/view?usp=drive_link). 
 
